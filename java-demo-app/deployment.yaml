@@ -17,7 +17,10 @@ spec:
         - name: zarf-registry-pull
       containers:
         - name: java-demo-app
-          image: 192.168.1.233:31999/java-demo-app:1.0.0
+          image: 192.168.1.233:31999/java-demo-app:1.0.1
+          env:
+            - name: APP_VERSION
+              value: "1.0.1"
           ports:
             - containerPort: 8080
           readinessProbe:
